@@ -1,5 +1,5 @@
 <svg viewBox="0 0 186 90" width="186" height="90" xmlns="http://www.w3.org/2000/svg">
-  <g fill="none" stroke="#0B2545" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#009ee0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
     <!-- M -->
     <path d="M 24 40 V 15 L 36 28 L 48 15 V 40" />
     <!-- U -->
@@ -15,8 +15,8 @@
 
   <g fill="none" stroke-width="8" stroke-linecap="round">
     <!-- Outer arc (Teal) -->
-    <path d="M 14 48 A 79 28 0 0 0 172 48" stroke="#14B8A6" />
+    <path d="M 14 48 A 79 28 0 0 0 172 48" stroke="#e22a7a" />
     <!-- Inner arc (Navy) -->
-    <path d="M 34 48 A 59 14 0 0 0 152 48" stroke="#0B2545" />
+    <path d="M 34 48 A 59 14 0 0 0 152 48" stroke="#009ee0" />
   </g>
 </svg>

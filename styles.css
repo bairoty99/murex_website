@@ -3,11 +3,11 @@
 ========================================= */
 :root {
     /* Color Palette */
-    --primary: #0B2545;       /* Deep Navy */
-    --primary-light: #133A6B; /* Lighter Navy for hover states */
+    --primary: #009ee0;       /* Blue */
+    --primary-light: #33b5e8; /* Lighter Blue for hover states */
     --secondary: #F8F9FA;     /* Light Gray for backgrounds */
-    --accent: #14B8A6;        /* Teal for CTAs and highlights */
-    --accent-hover: #0F9688;  
+    --accent: #e22a7a;        /* Red-Pink for CTAs and highlights */
+    --accent-hover: #c91f66;  
     
     /* Typography */
     --font-sans: 'Inter', sans-serif;
@@ -565,6 +565,69 @@ ul {
 }
 
 /* =========================================
+   CUSTOMERS SECTION
+========================================= */
+.customers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.customer-card {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.customer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: -1;
+}
+
+.customer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+.customer-card:hover::before {
+    transform: scaleY(1);
+}
+
+.customer-name {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    transition: color 0.4s ease;
+}
+
+.customer-card:hover .customer-name {
+    color: #fff;
+}
+
+/* =========================================
    CONTACT SECTION
 ========================================= */
 .contact-grid {
@@ -650,7 +713,7 @@ ul {
    FOOTER
 ========================================= */
 .footer {
-    background-color: #051426;
+    background-color: #006fa0;
     color: #94a3b8;
     padding: 2rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
