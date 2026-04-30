@@ -728,6 +728,11 @@ ul {
     
     .hero-stats {
         flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    
+    .stat-divider {
+        display: none;
     }
 }
 
@@ -813,5 +818,51 @@ ul {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .stat-item {
+        width: 100%;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
     }
 }
