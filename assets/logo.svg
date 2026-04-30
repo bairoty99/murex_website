@@ -1,0 +1,22 @@
+<svg viewBox="0 0 186 90" width="186" height="90" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#0B2545" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- M -->
+    <path d="M 24 40 V 15 L 36 28 L 48 15 V 40" />
+    <!-- U -->
+    <path d="M 58 15 V 30 A 10 10 0 0 0 78 30 V 15" />
+    <!-- R -->
+    <path d="M 88 40 V 15 H 97 A 9 9 0 0 1 97 33 H 88" />
+    <path d="M 93 33 L 106 40" />
+    <!-- E -->
+    <path d="M 132 15 H 116 V 40 H 132 M 116 27.5 H 128" />
+    <!-- X -->
+    <path d="M 142 15 L 162 40 M 162 15 L 142 40" />
+  </g>
+
+  <g fill="none" stroke-width="8" stroke-linecap="round">
+    <!-- Outer arc (Teal) -->
+    <path d="M 14 48 A 79 28 0 0 0 172 48" stroke="#14B8A6" />
+    <!-- Inner arc (Navy) -->
+    <path d="M 34 48 A 59 14 0 0 0 152 48" stroke="#0B2545" />
+  </g>
+</svg>
