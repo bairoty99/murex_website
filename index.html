@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +23,18 @@
                 <span style="font-weight: 700; font-size: 1.5rem; color: var(--primary);">Murex LLC</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#values">Values</a></li>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#customers">Customers</a></li>
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                <li><a href="#values" data-i18n="nav_values">Values</a></li>
+                <li><a href="#partners" data-i18n="nav_partners">Partners</a></li>
+                <li><a href="#customers" data-i18n="nav_customers">Customers</a></li>
             </ul>
-            <a href="#contact" class="btn btn-primary nav-btn">Contact Us</a>
+            <a href="#contact" class="btn btn-primary nav-btn" data-i18n="nav_contact">Contact Us</a>
+            <button id="langToggle" class="lang-toggle" aria-label="Switch language">
+                <span class="lang-toggle-icon">🌐</span>
+                <span class="lang-toggle-text" data-i18n="lang_label">AR</span>
+            </button>
             <button class="mobile-toggle" aria-label="Toggle navigation">
                 <i class="ph ph-list"></i>
             </button>
@@ -42,27 +46,27 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content animate-on-scroll">
-            <h1>Engineering Experts for<br><span class="text-accent">Pharmaceutical Manufacturing</span></h1>
-            <p class="hero-subtitle">Leading engineering consulting firm with over 26 years of experience across the Middle East. Trusted partner for the Pharma, Cosmetics, Herbal, and Food industries.</p>
+            <h1 data-i18n="hero_title">Engineering Experts for<br><span class="text-accent" data-i18n="hero_title_accent">Pharmaceutical Manufacturing</span></h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Leading engineering consulting firm with over 26 years of experience across the Middle East. Trusted partner for the Pharma, Cosmetics, Herbal, and Food industries.</p>
             <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
-                <a href="#services" class="btn btn-outline btn-lg">Explore Services</a>
+                <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero_cta_primary">Get in Touch</a>
+                <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero_cta_secondary">Explore Services</a>
             </div>
             
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">26+</span>
-                    <span class="stat-label">Years Experience</span>
+                    <span class="stat-label" data-i18n="stat_years">Years Experience</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-number">50+</span>
-                    <span class="stat-label">Trusted Partners</span>
+                    <span class="stat-label" data-i18n="stat_partners">Trusted Partners</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-number">100%</span>
-                    <span class="stat-label">GMP Compliant</span>
+                    <span class="stat-label" data-i18n="stat_gmp">GMP Compliant</span>
                 </div>
             </div>
         </div>
@@ -73,15 +77,15 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-text animate-on-scroll">
-                    <h2 class="section-title">About Murex LLC</h2>
-                    <p class="lead">Murex LLC is a premier engineering consulting firm specializing in manufacturing solutions, with over 26 years of experience in the pharmaceutical sector.</p>
-                    <p>Through strategic partnerships with globally recognized machinery manufacturers, combined with a strong regional presence and a highly skilled team, we deliver a wide range of advanced equipment and services across the Middle East. Our expertise supports industries including pharmaceuticals, cosmetics, herbal products, and food production.</p>
+                    <h2 class="section-title" data-i18n="about_title">About Murex LLC</h2>
+                    <p class="lead" data-i18n="about_lead">Murex LLC is a premier engineering consulting firm specializing in manufacturing solutions, with over 26 years of experience in the pharmaceutical sector.</p>
+                    <p data-i18n="about_desc">Through strategic partnerships with globally recognized machinery manufacturers, combined with a strong regional presence and a highly skilled team, we deliver a wide range of advanced equipment and services across the Middle East. Our expertise supports industries including pharmaceuticals, cosmetics, herbal products, and food production.</p>
                 </div>
                 <div class="about-what-we-do animate-on-scroll" style="transition-delay: 0.2s;">
                     <div class="card card-accent">
-                        <h3>What We Do</h3>
-                        <p>We offer end-to-end support across the full lifecycle of industrial projects—from initial analysis and design to implementation, validation, and final acceptance. Our services also extend to quality compliance, performance optimization, and advanced technical troubleshooting.</p>
-                        <p>By leveraging modern technologies and proven methodologies, we help our clients improve efficiency, ensure product quality, and maximize operational productivity across their entire value chain.</p>
+                        <h3 data-i18n="about_wwd_title">What We Do</h3>
+                        <p data-i18n="about_wwd_p1">We offer end-to-end support across the full lifecycle of industrial projects—from initial analysis and design to implementation, validation, and final acceptance. Our services also extend to quality compliance, performance optimization, and advanced technical troubleshooting.</p>
+                        <p data-i18n="about_wwd_p2">By leveraging modern technologies and proven methodologies, we help our clients improve efficiency, ensure product quality, and maximize operational productivity across their entire value chain.</p>
                     </div>
                 </div>
             </div>
@@ -92,56 +96,56 @@
     <section id="services" class="services section-padding">
         <div class="container">
             <div class="section-header center animate-on-scroll">
-                <span class="subtitle">What We Offer</span>
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-description">Comprehensive engineering solutions tailored for pharmaceutical manufacturing.</p>
+                <span class="subtitle" data-i18n="services_subtitle">What We Offer</span>
+                <h2 class="section-title" data-i18n="services_title">Our Services</h2>
+                <p class="section-description" data-i18n="services_desc">Comprehensive engineering solutions tailored for pharmaceutical manufacturing.</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card animate-on-scroll">
                     <div class="service-icon"><i class="ph ph-factory"></i></div>
-                    <h3>Facility Design</h3>
-                    <p>State-of-the-art facility layout and cleanroom design. We optimize for seamless workflow, strict regulatory compliance, and future scalability, ensuring your infrastructure meets modern manufacturing demands.</p>
+                    <h3 data-i18n="svc_facility_title">Facility Design</h3>
+                    <p data-i18n="svc_facility_desc">State-of-the-art facility layout and cleanroom design. We optimize for seamless workflow, strict regulatory compliance, and future scalability, ensuring your infrastructure meets modern manufacturing demands.</p>
                 </div>
                 <div class="service-card animate-on-scroll" style="transition-delay: 0.1s;">
                     <div class="service-icon"><i class="ph ph-projector-screen-chart"></i></div>
-                    <h3>Project Management</h3>
-                    <p>End-to-end execution of industrial projects. Our dedicated teams ensure timely delivery within budget constraints while maintaining rigorous quality control at every phase of the project lifecycle.</p>
+                    <h3 data-i18n="svc_project_title">Project Management</h3>
+                    <p data-i18n="svc_project_desc">End-to-end execution of industrial projects. Our dedicated teams ensure timely delivery within budget constraints while maintaining rigorous quality control at every phase of the project lifecycle.</p>
                 </div>
                 <div class="service-card animate-on-scroll" style="transition-delay: 0.2s;">
                     <div class="service-icon"><i class="ph ph-git-merge"></i></div>
-                    <h3>Process Engineering</h3>
-                    <p>Optimization of manufacturing processes to enhance yield, efficiency, and safety. We analyze and upgrade existing systems using advanced methodologies to maximize your operational throughput.</p>
+                    <h3 data-i18n="svc_process_title">Process Engineering</h3>
+                    <p data-i18n="svc_process_desc">Optimization of manufacturing processes to enhance yield, efficiency, and safety. We analyze and upgrade existing systems using advanced methodologies to maximize your operational throughput.</p>
                 </div>
                 <div class="service-card animate-on-scroll" style="transition-delay: 0.3s;">
                     <div class="service-icon"><i class="ph ph-wrench"></i></div>
-                    <h3>Technical Support</h3>
-                    <p>Expert troubleshooting, proactive maintenance, and comprehensive operational support to minimize downtime. We provide rapid response and long-term strategies for machinery reliability.</p>
+                    <h3 data-i18n="svc_tech_title">Technical Support</h3>
+                    <p data-i18n="svc_tech_desc">Expert troubleshooting, proactive maintenance, and comprehensive operational support to minimize downtime. We provide rapid response and long-term strategies for machinery reliability.</p>
                 </div>
                 <div class="service-card animate-on-scroll" style="transition-delay: 0.4s;">
                     <div class="service-icon"><i class="ph ph-certificate"></i></div>
-                    <h3>GMP Compliance</h3>
-                    <p>Rigorous quality assurance and regulatory adherence. We guide you through complex validation processes ensuring global standards (FDA, EMA, WHO) are consistently met across your facility.</p>
+                    <h3 data-i18n="svc_gmp_title">GMP Compliance</h3>
+                    <p data-i18n="svc_gmp_desc">Rigorous quality assurance and regulatory adherence. We guide you through complex validation processes ensuring global standards (FDA, EMA, WHO) are consistently met across your facility.</p>
                 </div>
                 <div class="service-card animate-on-scroll" style="transition-delay: 0.5s;">
                     <div class="service-icon"><i class="ph ph-truck"></i></div>
-                    <h3>Equipment Sourcing</h3>
-                    <p>Strategic procurement of high-end pharmaceutical machinery. We leverage our global network to source, evaluate, and integrate the best equipment tailored to your specific production needs.</p>
+                    <h3 data-i18n="svc_equip_title">Equipment Sourcing</h3>
+                    <p data-i18n="svc_equip_desc">Strategic procurement of high-end pharmaceutical machinery. We leverage our global network to source, evaluate, and integrate the best equipment tailored to your specific production needs.</p>
                 </div>
                 <div class="service-card animate-on-scroll" style="transition-delay: 0.6s;">
                     <div class="service-icon"><i class="ph ph-clipboard-text"></i></div>
-                    <h3>Validation & Qualification</h3>
-                    <p>Comprehensive IQ/OQ/PQ protocols and execution. We ensure all equipment and systems are fully qualified and documented to meet strict pharmaceutical industry regulations.</p>
+                    <h3 data-i18n="svc_valid_title">Validation & Qualification</h3>
+                    <p data-i18n="svc_valid_desc">Comprehensive IQ/OQ/PQ protocols and execution. We ensure all equipment and systems are fully qualified and documented to meet strict pharmaceutical industry regulations.</p>
                 </div>
                 <div class="service-card animate-on-scroll" style="transition-delay: 0.7s;">
                     <div class="service-icon"><i class="ph ph-cpu"></i></div>
-                    <h3>Automation & Control</h3>
-                    <p>Implementation of advanced SCADA and PLC systems. We help you transition to smart manufacturing, providing real-time data monitoring and enhanced, precise process control.</p>
+                    <h3 data-i18n="svc_auto_title">Automation & Control</h3>
+                    <p data-i18n="svc_auto_desc">Implementation of advanced SCADA and PLC systems. We help you transition to smart manufacturing, providing real-time data monitoring and enhanced, precise process control.</p>
                 </div>
                 <div class="service-card animate-on-scroll" style="transition-delay: 0.8s;">
                     <div class="service-icon"><i class="ph ph-gear"></i></div>
-                    <h3>Manufacturing of Spare Parts and Development of Machinery</h3>
-                    <p>Custom engineering, fabrication of critical spare parts, and bespoke machinery development. We design, manufacture, and integrate specialized components to optimize your production efficiency and extend equipment lifespan.</p>
+                    <h3 data-i18n="svc_spare_title">Manufacturing of Spare Parts and Development of Machinery</h3>
+                    <p data-i18n="svc_spare_desc">Custom engineering, fabrication of critical spare parts, and bespoke machinery development. We design, manufacture, and integrate specialized components to optimize your production efficiency and extend equipment lifespan.</p>
                 </div>
             </div>
         </div>
@@ -151,8 +155,8 @@
     <section id="values" class="values section-padding bg-light">
         <div class="container">
             <div class="section-header center animate-on-scroll">
-                <span class="subtitle">Our Philosophy</span>
-                <h2 class="section-title">Core Values</h2>
+                <span class="subtitle" data-i18n="values_subtitle">Our Philosophy</span>
+                <h2 class="section-title" data-i18n="values_title">Core Values</h2>
             </div>
             <div class="values-grid">
                 <!-- Value 1 -->
@@ -160,32 +164,32 @@
                     <div class="value-icon">
                         <i class="ph ph-shield-check"></i>
                     </div>
-                    <h3>Quality</h3>
-                    <p>Commitment to delivering high-standard engineering solutions that stand the test of time.</p>
+                    <h3 data-i18n="val_quality_title">Quality</h3>
+                    <p data-i18n="val_quality_desc">Commitment to delivering high-standard engineering solutions that stand the test of time.</p>
                 </div>
                 <!-- Value 2 -->
                 <div class="value-card animate-on-scroll" style="transition-delay: 0.1s;">
                     <div class="value-icon">
                         <i class="ph ph-handshake"></i>
                     </div>
-                    <h3>Trust</h3>
-                    <p>Long-term partnerships built on reliability, transparency, and consistent results.</p>
+                    <h3 data-i18n="val_trust_title">Trust</h3>
+                    <p data-i18n="val_trust_desc">Long-term partnerships built on reliability, transparency, and consistent results.</p>
                 </div>
                 <!-- Value 3 -->
                 <div class="value-card animate-on-scroll" style="transition-delay: 0.2s;">
                     <div class="value-icon">
                         <i class="ph ph-lightbulb"></i>
                     </div>
-                    <h3>Passion</h3>
-                    <p>Deep dedication to innovation, excellence, and pushing the boundaries of engineering.</p>
+                    <h3 data-i18n="val_passion_title">Passion</h3>
+                    <p data-i18n="val_passion_desc">Deep dedication to innovation, excellence, and pushing the boundaries of engineering.</p>
                 </div>
                 <!-- Value 4 -->
                 <div class="value-card animate-on-scroll" style="transition-delay: 0.3s;">
                     <div class="value-icon">
                         <i class="ph ph-lightning"></i>
                     </div>
-                    <h3>Agility</h3>
-                    <p>Fast, adaptive solutions tailored to meet the ever-evolving needs of the industry.</p>
+                    <h3 data-i18n="val_agility_title">Agility</h3>
+                    <p data-i18n="val_agility_desc">Fast, adaptive solutions tailored to meet the ever-evolving needs of the industry.</p>
                 </div>
             </div>
         </div>
@@ -201,11 +205,8 @@
             <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 50%; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
                 <i class="ph ph-plant" style="font-size: 2.5rem; color: var(--accent);"></i>
             </div>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; max-width: 900px; margin: 0 auto; color: #fff;">
-                Moving Responsibly Towards <br/>
-                <span class="text-accent" style="display: inline-block; margin-top: 0.5rem;">A Sustainable Future</span>
-            </h2>
-            <p style="margin-top: 1.5rem; font-size: clamp(1rem, 2vw, 1.25rem); color: #cbd5e1; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; max-width: 900px; margin: 0 auto; color: #fff;" data-i18n="strategy_title">Moving Responsibly Towards <br/><span class="text-accent" style="display: inline-block; margin-top: 0.5rem;" data-i18n="strategy_title_accent">A Sustainable Future</span></h2>
+            <p style="margin-top: 1.5rem; font-size: clamp(1rem, 2vw, 1.25rem); color: #cbd5e1; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.6;" data-i18n="strategy_desc">
                 Integrating eco-friendly practices and sustainable engineering solutions into every stage of the manufacturing lifecycle.
             </p>
         </div>
@@ -215,50 +216,55 @@
     <section id="partners" class="partners section-padding">
         <div class="container">
             <div class="section-header center animate-on-scroll">
-                <span class="subtitle">Global Network</span>
-                <h2 class="section-title">Our Partners</h2>
-                <p class="section-description">We collaborate with globally recognized manufacturers to deliver best-in-class solutions.</p>
+                <span class="subtitle" data-i18n="partners_subtitle">Global Network</span>
+                <h2 class="section-title" data-i18n="partners_title">Our Partners</h2>
+                <p class="section-description" data-i18n="partners_desc">We collaborate with globally recognized manufacturers to deliver best-in-class solutions.</p>
             </div>
             
             <div class="partners-grid animate-on-scroll">
+                <!-- PAT Group - Applied filter for visibility -->
                 <div class="partner-logo" aria-label="PAT Group">
-                    <svg viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg" height="40" style="color: var(--primary);">
-                        <path d="M5 30V10H20C25.5 10 30 14.5 30 20C30 25.5 25.5 30 20 30H5Z" fill="var(--accent)"/>
-                        <path d="M5 30V10H20C25.5 10 30 14.5 30 20C30 25.5 25.5 30 20 30H5Z" stroke="currentColor" stroke-width="2"/>
-                        <text x="40" y="28" fill="currentColor" font-family="Poppins, sans-serif" font-weight="700" font-size="24" letter-spacing="1.5">PAT GROUP</text>
-                    </svg>
+                    <img src="assets/partners/PAT-Group.webp" alt="PAT Group" style="height: 50px; object-fit: contain; filter: brightness(0) saturate(100%);">
                 </div>
+                <!-- COMASA - Downloaded logo -->
                 <div class="partner-logo" aria-label="Comasa">
-                    <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" height="40" style="color: var(--primary);">
-                        <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="4"/>
-                        <circle cx="20" cy="20" r="4" fill="var(--accent)"/>
-                        <text x="40" y="28" fill="currentColor" font-family="Poppins, sans-serif" font-weight="700" font-size="24" letter-spacing="1">COMASA</text>
-                    </svg>
+                    <img src="assets/partners/comasa.png" alt="COMASA" style="height: 45px; object-fit: contain;">
                 </div>
+                <!-- Ecovida - Downloaded logo (white on transparent, needs dark bg) -->
                 <div class="partner-logo" aria-label="Ecovida">
-                    <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" height="35" style="color: var(--primary);">
-                        <rect x="5" y="10" width="20" height="20" rx="4" fill="var(--accent)"/>
-                        <rect x="15" y="5" width="20" height="20" rx="4" fill="transparent" stroke="currentColor" stroke-width="3"/>
-                        <text x="45" y="28" fill="currentColor" font-family="Poppins, sans-serif" font-weight="700" font-size="22">ECOVIDA</text>
-                    </svg>
+                    <img src="assets/partners/ecovida.png" alt="ECOVIDA" style="height: 40px; object-fit: contain; filter: brightness(0) saturate(100%);">
                 </div>
+                <!-- Wynka - Updated with logo -->
                 <div class="partner-logo" aria-label="Wynka">
-                    <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" height="38" style="color: var(--primary);">
-                        <path d="M10 20L20 5H30L20 20L30 35H20L10 20Z" fill="var(--accent)"/>
-                        <text x="35" y="28" fill="currentColor" font-family="Poppins, sans-serif" font-weight="700" font-size="22" letter-spacing="0.5">WYNKA</text>
-                    </svg>
+                    <img src="assets/partners/wynka_logo.jpeg" alt="Wynka" style="height: 45px; object-fit: contain;">
                 </div>
+                <!-- Copharm - Downloaded logo (white on transparent, needs dark bg) -->
                 <div class="partner-logo" aria-label="Copharm">
-                    <svg viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" height="38" style="color: var(--primary);">
-                        <polygon points="15,5 25,20 15,35 5,20" fill="var(--accent)"/>
-                        <text x="35" y="28" fill="currentColor" font-family="Poppins, sans-serif" font-weight="700" font-size="22" letter-spacing="0.5">COPHARM</text>
-                    </svg>
+                    <img src="assets/partners/copharm.png" alt="COPHARM" style="height: 40px; object-fit: contain; filter: brightness(0) saturate(100%);">
                 </div>
+                <!-- Accupack - Updated with logo -->
                 <div class="partner-logo" aria-label="Accupack">
-                    <svg viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg" height="38" style="color: var(--primary);">
-                        <path d="M5 20 A10 10 0 0 1 25 20 A10 10 0 0 1 5 20" fill="transparent" stroke="var(--accent)" stroke-width="4"/>
-                        <text x="35" y="28" fill="currentColor" font-family="Poppins, sans-serif" font-weight="700" font-size="22" letter-spacing="0.5">ACCUPACK</text>
-                    </svg>
+                    <img src="assets/partners/images.jpeg" alt="Accupack" style="height: 45px; object-fit: contain;">
+                </div>
+                <!-- IVEN - Updated with logo -->
+                <div class="partner-logo" aria-label="IVEN">
+                    <img src="assets/partners/c244577th_S.jpg" alt="IVEN" style="height: 45px; object-fit: contain;">
+                </div>
+                <!-- Pharma Access - Updated with logo -->
+                <div class="partner-logo" aria-label="Pharma Access">
+                    <img src="assets/partners/pharma-access.svg" alt="Pharma Access" style="height: 40px; object-fit: contain;">
+                </div>
+                <!-- Multigel - Downloaded logo -->
+                <div class="partner-logo" aria-label="Multigel">
+                    <img src="assets/partners/multigel.svg" alt="Multigel" style="height: 35px; object-fit: contain;">
+                </div>
+                <!-- Aranow - Updated with logo -->
+                <div class="partner-logo" aria-label="Aranow">
+                    <img src="assets/partners/aranow-google-foto.jpg" alt="Aranow" style="height: 45px; object-fit: contain;">
+                </div>
+                <!-- Rota - New Partner -->
+                <div class="partner-logo" aria-label="Rota">
+                    <img src="assets/partners/rota-logo-desktop.svg" alt="Rota" style="height: 40px; object-fit: contain;">
                 </div>
             </div>
         </div>
@@ -268,9 +274,9 @@
     <section id="customers" class="customers section-padding bg-light">
         <div class="container">
             <div class="section-header center animate-on-scroll">
-                <span class="subtitle">Our Clients</span>
-                <h2 class="section-title">Who We Serve</h2>
-                <p class="section-description">We proudly serve some of the local leading companies, delivering reliable solutions that consistently meet the highest standards of quality and on-time performance. This commitment has earned us the trust of our clients and positioned us as their preferred partner.</p>
+                <span class="subtitle" data-i18n="customers_subtitle">Our Clients</span>
+                <h2 class="section-title" data-i18n="customers_title">Who We Serve</h2>
+                <p class="section-description" data-i18n="customers_desc">We proudly serve some of the local leading companies, delivering reliable solutions that consistently meet the highest standards of quality and on-time performance. This commitment has earned us the trust of our clients and positioned us as their preferred partner.</p>
             </div>
             
             <div class="customers-grid animate-on-scroll">
@@ -304,28 +310,28 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info animate-on-scroll">
-                    <h2 class="section-title text-white">Get in Touch</h2>
-                    <p class="contact-desc">Ready to enhance your manufacturing facility? Contact us to discuss your project requirements.</p>
+                    <h2 class="section-title text-white" data-i18n="contact_title">Get in Touch</h2>
+                    <p class="contact-desc" data-i18n="contact_desc">Ready to enhance your manufacturing facility? Contact us to discuss your project requirements.</p>
                     
                     <ul class="contact-details">
                         <li>
                             <i class="ph ph-map-pin"></i>
                             <div>
-                                <strong>Address</strong>
-                                <p>Damascus, Syria</p>
+                                <strong data-i18n="contact_address_label">Address</strong>
+                                <p data-i18n="contact_address">Damascus, Syria</p>
                             </div>
                         </li>
                         <li>
                             <i class="ph ph-phone"></i>
                             <div>
-                                <strong>Phone</strong>
+                                <strong data-i18n="contact_phone_label">Phone</strong>
                                 <p><a href="tel:+963994972515" class="text-white">+963 994 972 515</a></p>
                             </div>
                         </li>
                         <li>
                             <i class="ph ph-envelope-simple"></i>
                             <div>
-                                <strong>Email</strong>
+                                <strong data-i18n="contact_email_label">Email</strong>
                                 <p><a href="mailto:info@murex-eng.com" class="text-white">info@murex-eng.com</a></p>
                             </div>
                         </li>
@@ -335,26 +341,26 @@
                 <div class="contact-form-container animate-on-scroll" style="transition-delay: 0.2s;">
                     <form id="contactForm" class="contact-form">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name">
+                            <label for="name" data-i18n="form_name">Full Name</label>
+                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name" data-i18n-placeholder="form_name_ph">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email address">
+                            <label for="email" data-i18n="form_email">Email Address</label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email address" data-i18n-placeholder="form_email_ph">
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Enter your phone number">
+                            <label for="phone" data-i18n="form_phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="Enter your phone number" data-i18n-placeholder="form_phone_ph">
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Enter the subject of your inquiry">
+                            <label for="subject" data-i18n="form_subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Enter the subject of your inquiry" data-i18n-placeholder="form_subject_ph">
                         </div>
                         <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Type your message here..."></textarea>
+                            <label for="message" data-i18n="form_message">Your Message</label>
+                            <textarea id="message" name="message" rows="4" required aria-required="true" placeholder="Type your message here..." data-i18n-placeholder="form_message_ph"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Request Consultation</button>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="form_submit">Request Consultation</button>
                     </form>
                 </div>
             </div>
@@ -368,7 +374,7 @@
                 <div class="footer-logo">
                     <img src="assets/logo.svg" alt="Murex LLC Logo" class="footer-logo-img">
                 </div>
-                <p>&copy; 2026 Murex LLC. All rights reserved.</p>
+                <p data-i18n="footer_copy">&copy; 2026 Murex LLC. All rights reserved.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/muthanna-murad-2a834327a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
                 </div>
