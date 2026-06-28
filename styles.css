@@ -253,6 +253,7 @@ ul {
     height: 48px;
     width: auto;
     transition: var(--transition);
+    direction: ltr;
 }
 
 .logo:hover .logo-svg {
