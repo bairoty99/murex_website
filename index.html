@@ -18,19 +18,125 @@
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
-                <img src="assets/logo.svg" alt="Murex LLC Logo" class="logo-img">
-                <span style="font-weight: 700; font-size: 1.5rem; color: var(--primary);">Murex LLC</span>
+            <a href="#" class="logo" aria-label="Murex LLC - Engineering Consulting">
+                <svg class="logo-svg" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Gradients -->
+                        <linearGradient id="emblemGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#009ee0" />     <!-- Brand Blue -->
+                            <stop offset="50%" stop-color="#7b2cbf" />    <!-- Purple -->
+                            <stop offset="100%" stop-color="#e22a7a" />   <!-- Brand Pink -->
+                        </linearGradient>
+                        
+                        <!-- Mask for the Gear to cut it open and have a clean center -->
+                        <mask id="gearMask">
+                            <!-- Keep everything white -->
+                            <rect x="0" y="0" width="80" height="80" fill="white" />
+                            <!-- Cut out center circle -->
+                            <circle cx="40" cy="40" r="16" fill="black" />
+                            <!-- Cut out right section to mimic open gear -->
+                            <!-- A pie wedge from -60 deg to 45 deg -->
+                            <path d="M 40,40 L 80,15 A 40,40 0 0,1 78,58 Z" fill="black" />
+                        </mask>
+                    </defs>
+
+                    <!-- EMBLEM -->
+                    <!-- Gear Group with Mask -->
+                    <g mask="url(#gearMask)">
+                        <!-- Outer teeth (overlapping rounded rectangles rotated) -->
+                        <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGrad)" />
+                        <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGrad)" transform="rotate(30 40 40)" />
+                        <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGrad)" transform="rotate(60 40 40)" />
+                        <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGrad)" transform="rotate(90 40 40)" />
+                        <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGrad)" transform="rotate(120 40 40)" />
+                        <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGrad)" transform="rotate(150 40 40)" />
+                        <!-- Main body ring -->
+                        <circle cx="40" cy="40" r="23" fill="url(#emblemGrad)" />
+                    </g>
+
+                    <!-- Geometric Emblem (3D Isometric Cube / Hexagon) -->
+                    <g transform="translate(14, 5)">
+                        <!-- Faces of the Cube with varying opacities for 3D depth -->
+                        <path d="M 46,35 L 46,23 L 35.6,29 L 35.6,41 Z" fill="url(#emblemGrad)" opacity="0.3" /> <!-- Top-Left Face -->
+                        <path d="M 46,35 L 46,23 L 56.4,29 L 56.4,41 Z" fill="url(#emblemGrad)" opacity="0.75" /> <!-- Top-Right Face -->
+                        <path d="M 46,35 L 35.6,41 L 46,47 L 56.4,41 Z" fill="url(#emblemGrad)" opacity="0.5" /> <!-- Bottom Face -->
+                        
+                        <!-- Wireframe Outline -->
+                        <!-- Outer Hexagon -->
+                        <path d="M 46,23 L 56.4,29 L 56.4,41 L 46,47 L 35.6,41 L 35.6,29 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="logo-stroke-adapt" />
+                        <!-- Inner Edges -->
+                        <line x1="46" y1="35" x2="46" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="logo-stroke-adapt" />
+                        <line x1="46" y1="35" x2="35.6" y2="41" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="logo-stroke-adapt" />
+                        <line x1="46" y1="35" x2="56.4" y2="41" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="logo-stroke-adapt" />
+                        
+                        <!-- Central Connective Node -->
+                        <circle cx="46" cy="35" r="3.5" fill="#7b2cbf" />
+                    </g>
+
+                    <!-- DNA Helix (Rotated and woven) -->
+                    <g transform="rotate(-15 40 40)">
+                        <!-- Rungs -->
+                        <line x1="33" y1="25" x2="47" y2="25" stroke="#e22a7a" stroke-width="1.5" opacity="0.6" />
+                        <line x1="31" y1="33" x2="49" y2="33" stroke="#e22a7a" stroke-width="1.5" opacity="0.6" />
+                        <line x1="31" y1="41" x2="49" y2="41" stroke="#009ee0" stroke-width="1.5" opacity="0.6" />
+                        <line x1="33" y1="49" x2="47" y2="49" stroke="#009ee0" stroke-width="1.5" opacity="0.6" />
+                        <line x1="37" y1="57" x2="43" y2="57" stroke="#009ee0" stroke-width="1.5" opacity="0.6" />
+                        
+                        <!-- Strand 1 -->
+                        <path d="M 38,15 C 48,25 48,35 38,45 C 28,55 28,65 38,75" fill="none" stroke="url(#emblemGrad)" stroke-width="3" stroke-linecap="round" />
+                        <!-- Strand 2 -->
+                        <path d="M 42,15 C 32,25 32,35 42,45 C 52,55 52,65 42,75" fill="none" stroke="url(#emblemGrad)" stroke-width="3" stroke-linecap="round" />
+                    </g>
+
+                    <!-- Chemical Nodes / Connections (Left side) -->
+                    <g>
+                        <!-- Connections -->
+                        <line x1="16" y1="32" x2="24" y2="42" stroke="url(#emblemGrad)" stroke-width="2.5" />
+                        <line x1="24" y1="42" x2="16" y2="54" stroke="url(#emblemGrad)" stroke-width="2.5" />
+                        <line x1="24" y1="42" x2="34" y2="38" stroke="url(#emblemGrad)" stroke-width="2.5" />
+                        <!-- Dots -->
+                        <circle cx="16" cy="32" r="3.5" fill="#e22a7a" />
+                        <circle cx="24" cy="42" r="4.5" fill="#7b2cbf" />
+                        <circle cx="16" cy="54" r="3.5" fill="#009ee0" />
+                        <circle cx="34" cy="38" r="3" fill="#009ee0" />
+                    </g>
+
+                    <!-- TEXT SECTION -->
+                    <!-- MUREX Text -->
+                    <!-- Letter M -->
+                    <text x="82" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="currentColor" class="logo-text-adapt">M</text>
+                    
+                    <!-- Custom U with Chart Nodes -->
+                    <g transform="translate(112, 10)">
+                        <!-- Left leg & bottom curve & right leg -->
+                        <path d="M 0,14 v 10 A 8,8 0 0,0 16,24 v -4" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" class="logo-stroke-adapt" />
+                        
+                        <!-- Chart lines -->
+                        <line x1="16" y1="20" x2="22" y2="12" stroke="#e22a7a" stroke-width="2.5" stroke-linecap="round" />
+                        <line x1="22" y1="12" x2="30" y2="18" stroke="#009ee0" stroke-width="2.5" stroke-linecap="round" />
+                        <line x1="30" y1="18" x2="38" y2="5" stroke="#009ee0" stroke-width="2.5" stroke-linecap="round" />
+                        
+                        <!-- Chart Nodes (Dots) -->
+                        <circle cx="16" cy="20" r="3" fill="currentColor" class="logo-text-adapt" />
+                        <circle cx="22" cy="12" r="3" fill="#e22a7a" />
+                        <circle cx="30" cy="18" r="3" fill="#7b2cbf" />
+                        <circle cx="38" cy="5" r="4" fill="#009ee0" />
+                    </g>
+
+                    <!-- Letters REX -->
+                    <text x="156" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="currentColor" class="logo-text-adapt">REX</text>
+
+                    <!-- ENGINEERING CONSULTING Text -->
+                    <text x="82" y="62" font-family="'Inter', sans-serif" font-weight="600" font-size="9" letter-spacing="1.2" fill="#009ee0" class="logo-subtext-adapt">ENGINEERING CONSULTING</text>
+                </svg>
             </a>
             <ul class="nav-links">
-                <li><a href="#home" data-i18n="nav_home">Home</a></li>
-                <li><a href="#about" data-i18n="nav_about">About</a></li>
-                <li><a href="#services" data-i18n="nav_services">Services</a></li>
-                <li><a href="#values" data-i18n="nav_values">Values</a></li>
-                <li><a href="#partners" data-i18n="nav_partners">Partners</a></li>
-                <li><a href="#customers" data-i18n="nav_customers">Customers</a></li>
+                <li><a href="#view-home" data-view="view-home" data-i18n="nav_home" class="active-nav">Home</a></li>
+                <li><a href="#view-company" data-view="view-company" data-i18n="nav_about">Company</a></li>
+                <li><a href="#view-services" data-view="view-services" data-i18n="nav_services">Services</a></li>
+                <li><a href="#view-network" data-view="view-network" data-i18n="nav_partners">Network</a></li>
             </ul>
-            <a href="#contact" class="btn btn-primary nav-btn" data-i18n="nav_contact">Contact Us</a>
+            <button class="btn btn-primary nav-btn open-contact-modal" data-i18n="nav_contact">Contact Us</button>
             <button id="langToggle" class="lang-toggle" aria-label="Switch language">
                 <span class="lang-toggle-icon">🌐</span>
                 <span class="lang-toggle-text" data-i18n="lang_label">AR</span>
@@ -42,6 +148,10 @@
     </nav>
 
     <!-- Hero Section -->
+    <main class="main-content">
+        <!-- View: Home -->
+        <div id="view-home" class="view active-view">
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
@@ -49,8 +159,8 @@
             <h1 data-i18n="hero_title">Engineering Experts for<br><span class="text-accent" data-i18n="hero_title_accent">Pharmaceutical Manufacturing</span></h1>
             <p class="hero-subtitle" data-i18n="hero_subtitle">Leading engineering consulting firm with over 26 years of experience across the Middle East. Trusted partner for the Pharma, Cosmetics, Herbal, and Food industries.</p>
             <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero_cta_primary">Get in Touch</a>
-                <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero_cta_secondary">Explore Services</a>
+                <a href="#contact" class="btn btn-primary btn-lg open-contact-modal" data-i18n="hero_cta_primary">Get in Touch</a>
+                <a href="#view-services" class="btn btn-outline btn-lg" data-i18n="hero_cta_secondary">Explore Services</a>
             </div>
             
             <div class="hero-stats">
@@ -72,6 +182,9 @@
         </div>
     </section>
 
+        </div>
+        <!-- View: Company -->
+        <div id="view-company" class="view">
     <!-- About Section -->
     <section id="about" class="about section-padding bg-light">
         <div class="container">
@@ -92,65 +205,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services section-padding">
-        <div class="container">
-            <div class="section-header center animate-on-scroll">
-                <span class="subtitle" data-i18n="services_subtitle">What We Offer</span>
-                <h2 class="section-title" data-i18n="services_title">Our Services</h2>
-                <p class="section-description" data-i18n="services_desc">Comprehensive engineering solutions tailored for pharmaceutical manufacturing.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><i class="ph ph-factory"></i></div>
-                    <h3 data-i18n="svc_facility_title">Facility Design</h3>
-                    <p data-i18n="svc_facility_desc">State-of-the-art facility layout and cleanroom design. We optimize for seamless workflow, strict regulatory compliance, and future scalability, ensuring your infrastructure meets modern manufacturing demands.</p>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="service-icon"><i class="ph ph-projector-screen-chart"></i></div>
-                    <h3 data-i18n="svc_project_title">Project Management</h3>
-                    <p data-i18n="svc_project_desc">End-to-end execution of industrial projects. Our dedicated teams ensure timely delivery within budget constraints while maintaining rigorous quality control at every phase of the project lifecycle.</p>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="service-icon"><i class="ph ph-git-merge"></i></div>
-                    <h3 data-i18n="svc_process_title">Process Engineering</h3>
-                    <p data-i18n="svc_process_desc">Optimization of manufacturing processes to enhance yield, efficiency, and safety. We analyze and upgrade existing systems using advanced methodologies to maximize your operational throughput.</p>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.3s;">
-                    <div class="service-icon"><i class="ph ph-wrench"></i></div>
-                    <h3 data-i18n="svc_tech_title">Technical Support</h3>
-                    <p data-i18n="svc_tech_desc">Expert troubleshooting, proactive maintenance, and comprehensive operational support to minimize downtime. We provide rapid response and long-term strategies for machinery reliability.</p>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.4s;">
-                    <div class="service-icon"><i class="ph ph-certificate"></i></div>
-                    <h3 data-i18n="svc_gmp_title">GMP Compliance</h3>
-                    <p data-i18n="svc_gmp_desc">Rigorous quality assurance and regulatory adherence. We guide you through complex validation processes ensuring global standards (FDA, EMA, WHO) are consistently met across your facility.</p>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.5s;">
-                    <div class="service-icon"><i class="ph ph-truck"></i></div>
-                    <h3 data-i18n="svc_equip_title">Equipment Sourcing</h3>
-                    <p data-i18n="svc_equip_desc">Strategic procurement of high-end pharmaceutical machinery. We leverage our global network to source, evaluate, and integrate the best equipment tailored to your specific production needs.</p>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.6s;">
-                    <div class="service-icon"><i class="ph ph-clipboard-text"></i></div>
-                    <h3 data-i18n="svc_valid_title">Validation & Qualification</h3>
-                    <p data-i18n="svc_valid_desc">Comprehensive IQ/OQ/PQ protocols and execution. We ensure all equipment and systems are fully qualified and documented to meet strict pharmaceutical industry regulations.</p>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.7s;">
-                    <div class="service-icon"><i class="ph ph-cpu"></i></div>
-                    <h3 data-i18n="svc_auto_title">Automation & Control</h3>
-                    <p data-i18n="svc_auto_desc">Implementation of advanced SCADA and PLC systems. We help you transition to smart manufacturing, providing real-time data monitoring and enhanced, precise process control.</p>
-                </div>
-                <div class="service-card animate-on-scroll" style="transition-delay: 0.8s;">
-                    <div class="service-icon"><i class="ph ph-gear"></i></div>
-                    <h3 data-i18n="svc_spare_title">Manufacturing of Spare Parts and Development of Machinery</h3>
-                    <p data-i18n="svc_spare_desc">Custom engineering, fabrication of critical spare parts, and bespoke machinery development. We design, manufacture, and integrate specialized components to optimize your production efficiency and extend equipment lifespan.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Values Section -->
     <section id="values" class="values section-padding bg-light">
         <div class="container">
@@ -161,15 +215,15 @@
             <div class="values-grid">
                 <!-- Value 1 -->
                 <div class="value-card animate-on-scroll">
-                    <div class="value-icon">
-                        <i class="ph ph-shield-check"></i>
+                    <div class="value-icon-wrap">
+                        <i class="ph ph-seal-check"></i>
                     </div>
                     <h3 data-i18n="val_quality_title">Quality</h3>
                     <p data-i18n="val_quality_desc">Commitment to delivering high-standard engineering solutions that stand the test of time.</p>
                 </div>
                 <!-- Value 2 -->
                 <div class="value-card animate-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="value-icon">
+                    <div class="value-icon-wrap">
                         <i class="ph ph-handshake"></i>
                     </div>
                     <h3 data-i18n="val_trust_title">Trust</h3>
@@ -177,16 +231,16 @@
                 </div>
                 <!-- Value 3 -->
                 <div class="value-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="value-icon">
-                        <i class="ph ph-lightbulb"></i>
+                    <div class="value-icon-wrap">
+                        <i class="ph ph-lightning"></i>
                     </div>
                     <h3 data-i18n="val_passion_title">Passion</h3>
                     <p data-i18n="val_passion_desc">Deep dedication to innovation, excellence, and pushing the boundaries of engineering.</p>
                 </div>
                 <!-- Value 4 -->
                 <div class="value-card animate-on-scroll" style="transition-delay: 0.3s;">
-                    <div class="value-icon">
-                        <i class="ph ph-lightning"></i>
+                    <div class="value-icon-wrap">
+                        <i class="ph ph-rocket-launch"></i>
                     </div>
                     <h3 data-i18n="val_agility_title">Agility</h3>
                     <p data-i18n="val_agility_desc">Fast, adaptive solutions tailored to meet the ever-evolving needs of the industry.</p>
@@ -196,22 +250,136 @@
     </section>
 
     <!-- Strategy Section -->
-    <section id="strategy" class="strategy section-padding text-white" style="background: linear-gradient(135deg, var(--primary) 0%, #33b5e8 100%); position: relative; overflow: hidden;">
-        <!-- Decorative glowing orbs -->
-        <div style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: var(--accent); border-radius: 50%; filter: blur(120px); opacity: 0.4;"></div>
-        <div style="position: absolute; bottom: -100px; right: -100px; width: 300px; height: 300px; background: var(--accent); border-radius: 50%; filter: blur(120px); opacity: 0.4;"></div>
-        
+    <section id="strategy" class="strategy section-padding text-white" style="background: #0f172a; position: relative; overflow: hidden;">
+        <!-- Soft accent glow -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 300px; background: rgba(0, 158, 224, 0.08); border-radius: 50%; filter: blur(80px); z-index: 0;"></div>
+
         <div class="container center animate-on-scroll" style="position: relative; z-index: 1;">
-            <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 50%; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
-                <i class="ph ph-plant" style="font-size: 2.5rem; color: var(--accent);"></i>
+            <div style="display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: rgba(0, 158, 224, 0.12); border-radius: 18px; margin-bottom: 2rem; border: 1px solid rgba(0, 158, 224, 0.25);">
+                <i class="ph ph-leaf" style="font-size: 2rem; color: #009ee0;"></i>
             </div>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; max-width: 900px; margin: 0 auto; color: #fff;" data-i18n="strategy_title">Moving Responsibly Towards <br/><span class="text-accent" style="display: inline-block; margin-top: 0.5rem;" data-i18n="strategy_title_accent">A Sustainable Future</span></h2>
-            <p style="margin-top: 1.5rem; font-size: clamp(1rem, 2vw, 1.25rem); color: #cbd5e1; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.6;" data-i18n="strategy_desc">
+            <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; max-width: 900px; margin: 0 auto; color: #f1f5f9;" data-i18n="strategy_title">Moving Responsibly Towards <br/><span style="display: inline-block; margin-top: 0.5rem; color: #009ee0;" data-i18n="strategy_title_accent">A Sustainable Future</span></h2>
+            <p style="margin-top: 1.5rem; font-size: clamp(1rem, 2vw, 1.15rem); color: #94a3b8; max-width: 620px; margin-left: auto; margin-right: auto; line-height: 1.7;" data-i18n="strategy_desc">
                 Integrating eco-friendly practices and sustainable engineering solutions into every stage of the manufacturing lifecycle.
             </p>
         </div>
     </section>
 
+        </div>
+        <!-- View: Services -->
+        <div id="view-services" class="view">
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header center animate-on-scroll">
+                <span class="subtitle" data-i18n="services_subtitle">What We Offer</span>
+                <h2 class="section-title" data-i18n="services_title">Our Services</h2>
+                <p class="section-description" data-i18n="services_desc">Comprehensive engineering solutions tailored for pharmaceutical manufacturing.</p>
+            </div>
+
+
+            <div class="services-console-container animate-on-scroll">
+                <!-- Grid Selector of Service Tiles -->
+                <div class="services-grid-selector">
+                    <button class="service-tile active" data-target="svc-0" data-index="0">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-factory"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_facility_title">Facility Design</span>
+                    </button>
+                    <button class="service-tile" data-target="svc-1" data-index="1">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-projector-screen-chart"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_project_title">Project Management</span>
+                    </button>
+                    <button class="service-tile" data-target="svc-2" data-index="2">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-git-merge"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_process_title">Process Engineering</span>
+                    </button>
+                    <button class="service-tile" data-target="svc-3" data-index="3">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-wrench"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_tech_title">Technical Support</span>
+                    </button>
+                    <button class="service-tile" data-target="svc-4" data-index="4">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-certificate"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_gmp_title">GMP Compliance</span>
+                    </button>
+                    <button class="service-tile" data-target="svc-5" data-index="5">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-truck"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_equip_title">Equipment Sourcing</span>
+                    </button>
+                    <button class="service-tile" data-target="svc-6" data-index="6">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-clipboard-text"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_valid_title">Validation & Qualification</span>
+                    </button>
+                    <button class="service-tile" data-target="svc-7" data-index="7">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-cpu"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_auto_title">Automation & Control</span>
+                    </button>
+                    <button class="service-tile" data-target="svc-8" data-index="8">
+                        <div class="tile-icon-wrapper">
+                            <i class="ph ph-gear"></i>
+                        </div>
+                        <span class="tile-title" data-i18n="svc_spare_title">Manufacturing of Spare Parts and Development of Machinery</span>
+                    </button>
+                </div>
+
+                <!-- Showcase Panel -->
+                <div class="service-showcase-panel">
+                    <div class="showcase-glow"></div>
+                    <div class="showcase-content">
+                        <div class="showcase-header">
+                            <div class="showcase-icon-box">
+                                <i id="showcase-icon" class="ph ph-factory"></i>
+                            </div>
+                            <div class="showcase-header-text">
+                                <h3 id="showcase-title" data-i18n="svc_facility_title">Facility Design</h3>
+                                <span class="showcase-tag" data-i18n="services_subtitle">What We Offer</span>
+                            </div>
+                        </div>
+
+                        <p id="showcase-desc" class="showcase-description" data-i18n="svc_facility_desc">
+                            State-of-the-art facility layout and cleanroom design. We optimize for seamless workflow, strict regulatory compliance, and future scalability, ensuring your infrastructure meets modern manufacturing demands.
+                        </p>
+
+                        <div class="showcase-features-container">
+                            <h4 class="features-heading" data-i18n="svc_features_heading">Key Features & Deliverables</h4>
+                            <ul id="showcase-features-list" class="features-list">
+                                <li data-i18n="svc_facility_feat1">Cleanroom Design (ISO 5 - ISO 8 / Class A-D)</li>
+                                <li data-i18n="svc_facility_feat2">GMP-Compliant Layouts & HVAC Optimization</li>
+                                <li data-i18n="svc_facility_feat3">Workflow Simulation & Scalability Planning</li>
+                            </ul>
+                        </div>
+
+                        <div class="showcase-actions">
+                            <button id="showcase-cta" class="btn btn-primary btn-inquire" data-i18n="svc_btn_inquire">
+                                Request Service Consultation
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+        </div>
+
+        <!-- View: Network -->
+        <div id="view-network" class="view">
     <!-- Partners Section -->
     <section id="partners" class="partners section-padding">
         <div class="container">
@@ -221,7 +389,7 @@
                 <p class="section-description" data-i18n="partners_desc">We collaborate with globally recognized manufacturers to deliver best-in-class solutions.</p>
             </div>
             
-            <div class="partners-grid animate-on-scroll">
+            <div class="marquee-container"><div class="marquee-track">
                 <!-- PAT Group - Applied filter for visibility -->
                 <div class="partner-logo" aria-label="PAT Group">
                     <img src="assets/partners/PAT-Group.webp" alt="PAT Group" style="height: 50px; object-fit: contain; filter: brightness(0) saturate(100%);">
@@ -265,8 +433,9 @@
                 <!-- Rota - New Partner -->
                 <div class="partner-logo" aria-label="Rota">
                     <img src="assets/partners/rota-logo-desktop.svg" alt="Rota" style="height: 40px; object-fit: contain;">
-                </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -279,7 +448,7 @@
                 <p class="section-description" data-i18n="customers_desc">We proudly serve some of the local leading companies, delivering reliable solutions that consistently meet the highest standards of quality and on-time performance. This commitment has earned us the trust of our clients and positioned us as their preferred partner.</p>
             </div>
             
-            <div class="customers-grid animate-on-scroll">
+            <div class="marquee-container"><div class="marquee-track">
                 <div class="customer-card">
                     <span class="customer-name">Proline</span>
                 </div>
@@ -301,10 +470,17 @@
                 <div class="customer-card" style="transition-delay: 0.6s;">
                     <span class="customer-name">Mercy Pharma</span>
                 </div>
-            </div>
+            </div></div>
         </div>
     </section>
 
+        </div>
+    </main>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal"><i class="ph ph-x"></i></button>
     <!-- Contact Section -->
     <section id="contact" class="contact section-padding bg-dark text-white">
         <div class="container">
@@ -315,7 +491,7 @@
                     
                     <ul class="contact-details">
                         <li>
-                            <i class="ph ph-map-pin"></i>
+                            <img src="assets/Emblem_of_Syria_(2025–present).svg" alt="Syria Location">
                             <div>
                                 <strong data-i18n="contact_address_label">Address</strong>
                                 <p data-i18n="contact_address">Damascus, Syria</p>
@@ -332,14 +508,33 @@
                             <i class="ph ph-envelope-simple"></i>
                             <div>
                                 <strong data-i18n="contact_email_label">Email</strong>
-                                <p><a href="mailto:info@murex-eng.com" class="text-white">info@murex-eng.com</a></p>
+                                <p><a href="mailto:info@murex.llc" class="text-white">info@murex.llc</a></p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="contact-form-container animate-on-scroll" style="transition-delay: 0.2s;">
+                    <!-- 
+                        REAL EMAIL DELIVERY via Web3Forms (free, no backend needed)
+                        HOW IT WORKS: When someone submits this form, Web3Forms sends
+                        the data to info@murex.llc. On the very FIRST submission, 
+                        Web3Forms will send a one-time confirmation email to info@murex.llc 
+                        asking you to click "Allow" — after that, all future submissions 
+                        arrive directly in your inbox.
+                        Get your free access key at: https://web3forms.com/
+                    -->
                     <form id="contactForm" class="contact-form">
+                        <!-- Web3Forms access key — replace with yours from web3forms.com -->
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                        <!-- Where emails are sent -->
+                        <input type="hidden" name="to" value="info@murex.llc">
+                        <!-- Email subject line -->
+                        <input type="hidden" name="subject" value="New Consultation Request — Murex LLC Website">
+                        <!-- Anti-spam honeypot -->
+                        <input type="checkbox" name="botcheck" style="display:none">
+                        <!-- Reply-to will be set to the visitor's email automatically -->
+
                         <div class="form-group">
                             <label for="name" data-i18n="form_name">Full Name</label>
                             <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name" data-i18n-placeholder="form_name_ph">
@@ -354,7 +549,7 @@
                         </div>
                         <div class="form-group">
                             <label for="subject" data-i18n="form_subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Enter the subject of your inquiry" data-i18n-placeholder="form_subject_ph">
+                            <input type="text" id="subject" name="subject_line" required aria-required="true" placeholder="Enter the subject of your inquiry" data-i18n-placeholder="form_subject_ph">
                         </div>
                         <div class="form-group">
                             <label for="message" data-i18n="form_message">Your Message</label>
@@ -367,12 +562,104 @@
         </div>
     </section>
 
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <div class="footer-logo">
-                    <img src="assets/logo.svg" alt="Murex LLC Logo" class="footer-logo-img">
+                <div class="footer-logo" aria-label="Murex LLC - Engineering Consulting">
+                    <svg class="logo-svg footer-logo-svg" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <!-- Gradients -->
+                            <linearGradient id="emblemGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#33b5e8" />     <!-- Lighter Blue -->
+                                <stop offset="50%" stop-color="#b583ff" />    <!-- Lighter Purple -->
+                                <stop offset="100%" stop-color="#ff69b4" />   <!-- Lighter Pink -->
+                            </linearGradient>
+                            
+                            <!-- Mask for the Gear to cut it open and have a clean center -->
+                            <mask id="gearMaskFooter">
+                                <!-- Keep everything white -->
+                                <rect x="0" y="0" width="80" height="80" fill="white" />
+                                <!-- Cut out center circle -->
+                                <circle cx="40" cy="40" r="16" fill="black" />
+                                <!-- Cut out right section to mimic open gear -->
+                                <path d="M 40,40 L 80,15 A 40,40 0 0,1 78,58 Z" fill="black" />
+                            </mask>
+                        </defs>
+
+                        <!-- EMBLEM -->
+                        <g mask="url(#gearMaskFooter)">
+                            <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGradFooter)" />
+                            <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGradFooter)" transform="rotate(30 40 40)" />
+                            <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGradFooter)" transform="rotate(60 40 40)" />
+                            <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGradFooter)" transform="rotate(90 40 40)" />
+                            <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGradFooter)" transform="rotate(120 40 40)" />
+                            <rect x="35" y="8" width="10" height="64" rx="3" fill="url(#emblemGradFooter)" transform="rotate(150 40 40)" />
+                            <circle cx="40" cy="40" r="23" fill="url(#emblemGradFooter)" />
+                        </g>
+
+                        <!-- Geometric Emblem (3D Isometric Cube / Hexagon) -->
+                        <g transform="translate(14, 5)">
+                            <!-- Faces of the Cube with varying opacities for 3D depth -->
+                            <path d="M 46,35 L 46,23 L 35.6,29 L 35.6,41 Z" fill="url(#emblemGradFooter)" opacity="0.3" /> <!-- Top-Left Face -->
+                            <path d="M 46,35 L 46,23 L 56.4,29 L 56.4,41 Z" fill="url(#emblemGradFooter)" opacity="0.75" /> <!-- Top-Right Face -->
+                            <path d="M 46,35 L 35.6,41 L 46,47 L 56.4,41 Z" fill="url(#emblemGradFooter)" opacity="0.5" /> <!-- Bottom Face -->
+                            
+                            <!-- Wireframe Outline -->
+                            <!-- Outer Hexagon -->
+                            <path d="M 46,23 L 56.4,29 L 56.4,41 L 46,47 L 35.6,41 L 35.6,29 Z" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- Inner Edges -->
+                            <line x1="46" y1="35" x2="46" y2="23" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                            <line x1="46" y1="35" x2="35.6" y2="41" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                            <line x1="46" y1="35" x2="56.4" y2="41" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                            
+                            <!-- Central Connective Node -->
+                            <circle cx="46" cy="35" r="3.5" fill="#b583ff" />
+                        </g>
+
+                        <!-- DNA Helix -->
+                        <g transform="rotate(-15 40 40)">
+                            <line x1="33" y1="25" x2="47" y2="25" stroke="#ff69b4" stroke-width="1.5" opacity="0.6" />
+                            <line x1="31" y1="33" x2="49" y2="33" stroke="#ff69b4" stroke-width="1.5" opacity="0.6" />
+                            <line x1="31" y1="41" x2="49" y2="41" stroke="#33b5e8" stroke-width="1.5" opacity="0.6" />
+                            <line x1="33" y1="49" x2="47" y2="49" stroke="#33b5e8" stroke-width="1.5" opacity="0.6" />
+                            <line x1="37" y1="57" x2="43" y2="57" stroke="#33b5e8" stroke-width="1.5" opacity="0.6" />
+                            
+                            <path d="M 38,15 C 48,25 48,35 38,45 C 28,55 28,65 38,75" fill="none" stroke="url(#emblemGradFooter)" stroke-width="3" stroke-linecap="round" />
+                            <path d="M 42,15 C 32,25 32,35 42,45 C 52,55 52,65 42,75" fill="none" stroke="url(#emblemGradFooter)" stroke-width="3" stroke-linecap="round" />
+                        </g>
+
+                        <!-- Chemical Nodes -->
+                        <g>
+                            <line x1="16" y1="32" x2="24" y2="42" stroke="url(#emblemGradFooter)" stroke-width="2.5" />
+                            <line x1="24" y1="42" x2="16" y2="54" stroke="url(#emblemGradFooter)" stroke-width="2.5" />
+                            <line x1="24" y1="42" x2="34" y2="38" stroke="url(#emblemGradFooter)" stroke-width="2.5" />
+                            <circle cx="16" cy="32" r="3.5" fill="#ff69b4" />
+                            <circle cx="24" cy="42" r="4.5" fill="#b583ff" />
+                            <circle cx="16" cy="54" r="3.5" fill="#33b5e8" />
+                            <circle cx="34" cy="38" r="3" fill="#33b5e8" />
+                        </g>
+
+                        <!-- TEXT SECTION -->
+                        <text x="82" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="#ffffff">M</text>
+                        
+                        <g transform="translate(112, 10)">
+                            <path d="M 0,14 v 10 A 8,8 0 0,0 16,24 v -4" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+                            <line x1="16" y1="20" x2="22" y2="12" stroke="#ff69b4" stroke-width="2.5" stroke-linecap="round" />
+                            <line x1="22" y1="12" x2="30" y2="18" stroke="#33b5e8" stroke-width="2.5" stroke-linecap="round" />
+                            <line x1="30" y1="18" x2="38" y2="5" stroke="#33b5e8" stroke-width="2.5" stroke-linecap="round" />
+                            <circle cx="16" cy="20" r="3" fill="#ffffff" />
+                            <circle cx="22" cy="12" r="3" fill="#ff69b4" />
+                            <circle cx="30" cy="18" r="3" fill="#b583ff" />
+                            <circle cx="38" cy="5" r="4" fill="#33b5e8" />
+                        </g>
+
+                        <text x="156" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="#ffffff">REX</text>
+                        <text x="82" y="62" font-family="'Inter', sans-serif" font-weight="600" font-size="9" letter-spacing="1.2" fill="#33b5e8">ENGINEERING CONSULTING</text>
+                    </svg>
                 </div>
                 <p data-i18n="footer_copy">&copy; 2026 Murex LLC. All rights reserved.</p>
                 <div class="social-links">
