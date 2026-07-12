@@ -7,15 +7,10 @@
       <stop offset="100%" stop-color="#e22a7a" />   <!-- Brand Pink -->
     </linearGradient>
     
-    <!-- Mask for the Gear to cut it open and have a clean center -->
+    <!-- Mask for the Gear - full closed gear with center cutout -->
     <mask id="gearMask">
-      <!-- Keep everything white -->
       <rect x="0" y="0" width="80" height="80" fill="white" />
-      <!-- Cut out center circle -->
-      <circle cx="40" cy="40" r="16" fill="black" />
-      <!-- Cut out right section to mimic open gear -->
-      <!-- A pie wedge from -60 deg to 45 deg -->
-      <path d="M 40,40 L 80,15 A 40,40 0 0,1 78,58 Z" fill="black" />
+      <circle cx="40" cy="40" r="18" fill="black" />
     </mask>
   </defs>
 
@@ -33,22 +28,37 @@
     <circle cx="40" cy="40" r="23" fill="url(#emblemGrad)" />
   </g>
 
-  <!-- PCB Emblem (simplified) -->
-  <circle cx="40" cy="40" r="15.5" fill="#0a1628" />
+  <!-- PCB Emblem (detailed) -->
+  <circle cx="40" cy="40" r="17.5" fill="#0a1628" />
+  <circle cx="40" cy="40" r="16.5" fill="none" stroke="#009ee0" stroke-width="0.7" stroke-dasharray="2,2.5" opacity="0.3" />
   <g>
-    <path d="M 36,30 L 32,40 H 36 L 32,50" fill="none" stroke="#009ee0" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" class="logo-stroke-adapt" />
-    <rect x="42" y="35" width="8" height="8" rx="1" fill="none" stroke="#009ee0" stroke-width="1.8" class="logo-stroke-adapt" />
-    <rect x="44" y="37" width="4" height="4" rx="0.5" fill="#009ee0" class="logo-text-adapt" opacity="0.6" />
-    <line x1="40" y1="37" x2="42" y2="37" stroke="#009ee0" stroke-width="1.2" class="logo-stroke-adapt" />
-    <line x1="40" y1="41" x2="42" y2="41" stroke="#009ee0" stroke-width="1.2" class="logo-stroke-adapt" />
-    <line x1="50" y1="37" x2="52" y2="37" stroke="#009ee0" stroke-width="1.2" class="logo-stroke-adapt" />
-    <line x1="50" y1="41" x2="52" y2="41" stroke="#009ee0" stroke-width="1.2" class="logo-stroke-adapt" />
-    <path d="M 30,33 H 34" fill="none" stroke="#009ee0" stroke-width="1" stroke-linecap="round" class="logo-stroke-adapt" />
-    <circle cx="29" cy="33" r="1.2" fill="#009ee0" class="logo-text-adapt" />
-    <path d="M 30,47 H 34" fill="none" stroke="#009ee0" stroke-width="1" stroke-linecap="round" class="logo-stroke-adapt" />
-    <circle cx="29" cy="47" r="1.2" fill="#009ee0" class="logo-text-adapt" />
-    <path d="M 46,28 V 32" fill="none" stroke="#009ee0" stroke-width="1" stroke-linecap="round" class="logo-stroke-adapt" />
-    <circle cx="46" cy="27" r="1.2" fill="#009ee0" class="logo-text-adapt" />
+    <path d="M 35,27 L 29,38 H 35 L 29,51" fill="none" stroke="#009ee0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="43" y="33" width="10" height="10" rx="1.5" fill="none" stroke="#009ee0" stroke-width="1.5" />
+    <rect x="45.5" y="35.5" width="5" height="5" rx="0.5" fill="#009ee0" opacity="0.5" />
+    <line x1="40" y1="35.5" x2="43" y2="35.5" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="40" y1="38" x2="43" y2="38" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="40" y1="40.5" x2="43" y2="40.5" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="53" y1="35.5" x2="56" y2="35.5" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="53" y1="38" x2="56" y2="38" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="53" y1="40.5" x2="56" y2="40.5" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="45.5" y1="30" x2="45.5" y2="33" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="48" y1="30" x2="48" y2="33" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="50.5" y1="30" x2="50.5" y2="33" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="45.5" y1="43" x2="45.5" y2="46" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="48" y1="43" x2="48" y2="46" stroke="#009ee0" stroke-width="0.9" />
+    <line x1="50.5" y1="43" x2="50.5" y2="46" stroke="#009ee0" stroke-width="0.9" />
+    <path d="M 27,29 L 32,33 V 38" fill="none" stroke="#009ee0" stroke-width="0.9" stroke-linecap="round" />
+    <circle cx="27" cy="29" r="1.2" fill="#009ee0" />
+    <path d="M 26,47 L 31,43 H 36" fill="none" stroke="#009ee0" stroke-width="0.9" stroke-linecap="round" />
+    <circle cx="26" cy="47" r="1.2" fill="#009ee0" />
+    <path d="M 46,24 V 28" fill="none" stroke="#009ee0" stroke-width="0.9" stroke-linecap="round" />
+    <circle cx="46" cy="24" r="1.2" fill="#009ee0" />
+    <path d="M 44,54 V 49 L 47,46" fill="none" stroke="#009ee0" stroke-width="0.9" stroke-linecap="round" />
+    <circle cx="44" cy="54" r="1.2" fill="#009ee0" />
+    <path d="M 55,42 H 53" fill="none" stroke="#009ee0" stroke-width="0.9" stroke-linecap="round" />
+    <circle cx="55" cy="42" r="1" fill="#009ee0" />
+    <rect x="25" y="35" width="3" height="1.8" rx="0.3" fill="none" stroke="#009ee0" stroke-width="0.7" />
+    <rect x="38" y="50" width="1.8" height="3" rx="0.3" fill="none" stroke="#009ee0" stroke-width="0.7" />
   </g>
 
   <!-- TEXT SECTION -->
