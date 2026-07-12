@@ -490,9 +490,20 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // --- Contact Form — Real Email via Web3Forms ---
+    // --- Contact Form — Real Email via EmailJS ---
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+        // Initialize EmailJS with provided credentials
+        const EMAILJS_PUBLIC_KEY = '3lF1PaAxo6-S6paeK'; 
+        const EMAILJS_SERVICE_ID = 'service_wxho1xt'; 
+        const EMAILJS_TEMPLATE_ID = 'template_5ka7mfg'; 
+
+        if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') {
+            emailjs.init({
+                publicKey: EMAILJS_PUBLIC_KEY,
+            });
+        }
+
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
@@ -503,16 +514,27 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.textContent = 'Sending...';
             btn.disabled = true;
 
+            // Simple validation check: if user has not set up the keys yet
+            if (EMAILJS_PUBLIC_KEY === 'YOUR_EMAILJS_PUBLIC_KEY' || 
+                EMAILJS_SERVICE_ID === 'YOUR_EMAILJS_SERVICE_ID' || 
+                EMAILJS_TEMPLATE_ID === 'YOUR_EMAILJS_TEMPLATE_ID') {
+                
+                console.error('EmailJS is not configured. Please set your Service ID, Template ID, and Public Key in script.js.');
+                alert('EmailJS settings are not configured. Please see script.js to insert your keys.');
+                
+                btn.textContent = '✗ Config Error';
+                btn.disabled = false;
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 3000);
+                return;
+            }
+
             try {
-                const formData = new FormData(contactForm);
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                });
+                // Send form directly using emailjs
+                const result = await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm);
 
-                const data = await response.json();
-
-                if (data.success) {
+                if (result.status === 200) {
                     // Success state
                     btn.textContent = '✓ Message Sent!';
                     btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
@@ -527,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.style.boxShadow = '';
                     }, 4000);
                 } else {
-                    throw new Error(data.message || 'Submission failed');
+                    throw new Error('Submission failed with status: ' + result.status);
                 }
             } catch (err) {
                 // Error state
@@ -535,7 +557,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
                 btn.style.boxShadow = '0 10px 20px -5px rgba(239,68,68,0.4)';
                 btn.disabled = false;
-                console.error('Form error:', err);
+                console.error('EmailJS error:', err);
 
                 setTimeout(() => {
                     btn.textContent = originalText;

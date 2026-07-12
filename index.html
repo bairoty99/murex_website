@@ -54,80 +54,70 @@
                         <circle cx="40" cy="40" r="23" fill="url(#emblemGrad)" />
                     </g>
 
-                    <!-- Geometric Emblem (3D Isometric Cube / Hexagon) -->
-                    <g transform="translate(14, 5)">
-                        <!-- Faces of the Cube with varying opacities for 3D depth -->
-                        <path d="M 46,35 L 46,23 L 35.6,29 L 35.6,41 Z" fill="url(#emblemGrad)" opacity="0.3" /> <!-- Top-Left Face -->
-                        <path d="M 46,35 L 46,23 L 56.4,29 L 56.4,41 Z" fill="url(#emblemGrad)" opacity="0.75" /> <!-- Top-Right Face -->
-                        <path d="M 46,35 L 35.6,41 L 46,47 L 56.4,41 Z" fill="url(#emblemGrad)" opacity="0.5" /> <!-- Bottom Face -->
-                        
-                        <!-- Wireframe Outline -->
-                        <!-- Outer Hexagon -->
-                        <path d="M 46,23 L 56.4,29 L 56.4,41 L 46,47 L 35.6,41 L 35.6,29 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="logo-stroke-adapt" />
-                        <!-- Inner Edges -->
-                        <line x1="46" y1="35" x2="46" y2="23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="logo-stroke-adapt" />
-                        <line x1="46" y1="35" x2="35.6" y2="41" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="logo-stroke-adapt" />
-                        <line x1="46" y1="35" x2="56.4" y2="41" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="logo-stroke-adapt" />
-                        
-                        <!-- Central Connective Node -->
-                        <circle cx="46" cy="35" r="3.5" fill="#7b2cbf" />
-                    </g>
-
-                    <!-- DNA Helix (Rotated and woven) -->
-                    <g transform="rotate(-15 40 40)">
-                        <!-- Rungs -->
-                        <line x1="33" y1="25" x2="47" y2="25" stroke="#e22a7a" stroke-width="1.5" opacity="0.6" />
-                        <line x1="31" y1="33" x2="49" y2="33" stroke="#e22a7a" stroke-width="1.5" opacity="0.6" />
-                        <line x1="31" y1="41" x2="49" y2="41" stroke="#009ee0" stroke-width="1.5" opacity="0.6" />
-                        <line x1="33" y1="49" x2="47" y2="49" stroke="#009ee0" stroke-width="1.5" opacity="0.6" />
-                        <line x1="37" y1="57" x2="43" y2="57" stroke="#009ee0" stroke-width="1.5" opacity="0.6" />
-                        
-                        <!-- Strand 1 -->
-                        <path d="M 38,15 C 48,25 48,35 38,45 C 28,55 28,65 38,75" fill="none" stroke="url(#emblemGrad)" stroke-width="3" stroke-linecap="round" />
-                        <!-- Strand 2 -->
-                        <path d="M 42,15 C 32,25 32,35 42,45 C 52,55 52,65 42,75" fill="none" stroke="url(#emblemGrad)" stroke-width="3" stroke-linecap="round" />
-                    </g>
-
-                    <!-- Chemical Nodes / Connections (Left side) -->
+                    <!-- PCB & Microprocessor & Spark Segment -->
                     <g>
-                        <!-- Connections -->
-                        <line x1="16" y1="32" x2="24" y2="42" stroke="url(#emblemGrad)" stroke-width="2.5" />
-                        <line x1="24" y1="42" x2="16" y2="54" stroke="url(#emblemGrad)" stroke-width="2.5" />
-                        <line x1="24" y1="42" x2="34" y2="38" stroke="url(#emblemGrad)" stroke-width="2.5" />
-                        <!-- Dots -->
-                        <circle cx="16" cy="32" r="3.5" fill="#e22a7a" />
-                        <circle cx="24" cy="42" r="4.5" fill="#7b2cbf" />
-                        <circle cx="16" cy="54" r="3.5" fill="#009ee0" />
-                        <circle cx="34" cy="38" r="3" fill="#009ee0" />
+                        <!-- Dashed Outer Layout Line -->
+                        <circle cx="40" cy="40" r="22" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2,3" class="logo-stroke-adapt" opacity="0.4" />
+                        
+                        <!-- Electric Spark (Left side) -->
+                        <path d="M 33,28 L 27,39 H 33 L 27,50" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="logo-stroke-adapt" />
+                        
+                        <!-- Microprocessor (Right side) -->
+                        <!-- IC Body -->
+                        <rect x="47" y="34" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8" class="logo-stroke-adapt" />
+                        <rect x="50" y="37" width="5" height="5" rx="0.5" fill="currentColor" class="logo-text-adapt" opacity="0.7" />
+                        <!-- Pins -->
+                        <!-- Left Pins -->
+                        <line x1="43" y1="36.5" x2="47" y2="36.5" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <line x1="43" y1="39.5" x2="47" y2="39.5" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <line x1="43" y1="42.5" x2="47" y2="42.5" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <!-- Right Pins -->
+                        <line x1="58" y1="36.5" x2="62" y2="36.5" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <line x1="58" y1="39.5" x2="62" y2="39.5" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <line x1="58" y1="42.5" x2="62" y2="42.5" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <!-- Top Pins -->
+                        <line x1="49.5" y1="30" x2="49.5" y2="34" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <line x1="52.5" y1="30" x2="52.5" y2="34" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <line x1="55.5" y1="30" x2="55.5" y2="34" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <!-- Bottom Pins -->
+                        <line x1="49.5" y1="45" x2="49.5" y2="49" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <line x1="52.5" y1="45" x2="52.5" y2="49" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+                        <line x1="55.5" y1="45" x2="55.5" y2="49" stroke="currentColor" stroke-width="1" class="logo-stroke-adapt" />
+
+                        <!-- SMT Components -->
+                        <rect x="21" y="32" width="2" height="5" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8" class="logo-stroke-adapt" />
+                        <rect x="42" y="52" width="5" height="2" rx="0.5" fill="none" stroke="currentColor" stroke-width="0.8" class="logo-stroke-adapt" />
+
+                        <!-- PCB Traces & Nodes -->
+                        <!-- Trace 1 -->
+                        <path d="M 23,24 L 28,29 V 35" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" class="logo-stroke-adapt" />
+                        <circle cx="23" cy="24" r="1.2" fill="currentColor" class="logo-text-adapt" />
+                        <!-- Trace 2 -->
+                        <path d="M 20,45 L 26,40 H 31" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" class="logo-stroke-adapt" />
+                        <circle cx="20" cy="45" r="1.2" fill="currentColor" class="logo-text-adapt" />
+                        <!-- Trace 3 -->
+                        <path d="M 48,21 V 27 L 44,31" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" class="logo-stroke-adapt" />
+                        <circle cx="48" cy="21" r="1.2" fill="currentColor" class="logo-text-adapt" />
+                        <!-- Trace 4 -->
+                        <path d="M 58,53 L 53,48 V 44" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" class="logo-stroke-adapt" />
+                        <circle cx="58" cy="53" r="1.2" fill="currentColor" class="logo-text-adapt" />
                     </g>
 
                     <!-- TEXT SECTION -->
                     <!-- MUREX Text -->
-                    <!-- Letter M -->
-                    <text x="82" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="currentColor" class="logo-text-adapt">M</text>
-                    
-                    <!-- Custom U with Chart Nodes -->
-                    <g transform="translate(112, 10)">
-                        <!-- Left leg & bottom curve & right leg -->
-                        <path d="M 0,14 v 10 A 8,8 0 0,0 16,24 v -4" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" class="logo-stroke-adapt" />
-                        
-                        <!-- Chart lines -->
-                        <line x1="16" y1="20" x2="22" y2="12" stroke="#e22a7a" stroke-width="2.5" stroke-linecap="round" />
-                        <line x1="22" y1="12" x2="30" y2="18" stroke="#009ee0" stroke-width="2.5" stroke-linecap="round" />
-                        <line x1="30" y1="18" x2="38" y2="5" stroke="#009ee0" stroke-width="2.5" stroke-linecap="round" />
-                        
-                        <!-- Chart Nodes (Dots) -->
-                        <circle cx="16" cy="20" r="3" fill="currentColor" class="logo-text-adapt" />
-                        <circle cx="22" cy="12" r="3" fill="#e22a7a" />
-                        <circle cx="30" cy="18" r="3" fill="#7b2cbf" />
-                        <circle cx="38" cy="5" r="4" fill="#009ee0" />
-                    </g>
+                    <text x="82" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="currentColor" class="logo-text-adapt">MUREX</text>
 
-                    <!-- Letters REX -->
-                    <text x="156" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="currentColor" class="logo-text-adapt">REX</text>
+                    <!-- Data Line Wave over REX -->
+                    <path d="M 138,20 C 150,5 165,28 180,12 C 195,-2 208,22 222,10" fill="none" stroke="#009ee0" stroke-width="2" stroke-linecap="round" class="logo-stroke-adapt" />
+                    <circle cx="138" cy="20" r="3" fill="#e22a7a" />
+                    <circle cx="154" cy="11" r="2.5" fill="#009ee0" />
+                    <circle cx="172" cy="17" r="2.5" fill="#e22a7a" />
+                    <circle cx="195" cy="7" r="3" fill="#009ee0" />
+                    <circle cx="222" cy="10" r="3.5" fill="#e22a7a" />
 
-                    <!-- ENGINEERING CONSULTING Text -->
-                    <text x="82" y="62" font-family="'Inter', sans-serif" font-weight="600" font-size="9" letter-spacing="1.2" fill="#009ee0" class="logo-subtext-adapt">ENGINEERING CONSULTING</text>
+                    <!-- ENGINEERING & CONSULTING Stacked Text -->
+                    <text x="150" y="59" font-family="'Inter', sans-serif" font-weight="700" font-size="8.5" letter-spacing="2" fill="#009ee0" class="logo-subtext-adapt" text-anchor="middle">ENGINEERING</text>
+                    <text x="150" y="70" font-family="'Inter', sans-serif" font-weight="700" font-size="8.5" letter-spacing="2" fill="#009ee0" class="logo-subtext-adapt" text-anchor="middle">CONSULTING</text>
                 </svg>
             </a>
             <ul class="nav-links">
@@ -430,10 +420,6 @@
                 <div class="partner-logo" aria-label="Aranow">
                     <img src="assets/partners/aranow-google-foto.jpg" alt="Aranow" style="height: 45px; object-fit: contain;">
                 </div>
-                <!-- Rota - New Partner -->
-                <div class="partner-logo" aria-label="Rota">
-                    <img src="assets/partners/rota-logo-desktop.svg" alt="Rota" style="height: 40px; object-fit: contain;">
-            </div>
         </div>
         </div>
         </div>
@@ -450,7 +436,7 @@
             
             <div class="marquee-container"><div class="marquee-track">
                 <div class="customer-card">
-                    <span class="customer-name">Proline</span>
+                    <span class="customer-name">Proline Pharma</span>
                 </div>
                 <div class="customer-card" style="transition-delay: 0.1s;">
                     <span class="customer-name">Alfares</span>
@@ -525,15 +511,10 @@
                         Get your free access key at: https://web3forms.com/
                     -->
                     <form id="contactForm" class="contact-form">
-                        <!-- Web3Forms access key — replace with yours from web3forms.com -->
-                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-                        <!-- Where emails are sent -->
-                        <input type="hidden" name="to" value="info@murex.llc">
-                        <!-- Email subject line -->
-                        <input type="hidden" name="subject" value="New Consultation Request — Murex LLC Website">
-                        <!-- Anti-spam honeypot -->
-                        <input type="checkbox" name="botcheck" style="display:none">
-                        <!-- Reply-to will be set to the visitor's email automatically -->
+                        <!-- 
+                            EmailJS Form: Integration completed.
+                            The email is sent directly via script.js using your EmailJS keys.
+                        -->
 
                         <div class="form-group">
                             <label for="name" data-i18n="form_name">Full Name</label>
@@ -601,64 +582,69 @@
                             <circle cx="40" cy="40" r="23" fill="url(#emblemGradFooter)" />
                         </g>
 
-                        <!-- Geometric Emblem (3D Isometric Cube / Hexagon) -->
-                        <g transform="translate(14, 5)">
-                            <!-- Faces of the Cube with varying opacities for 3D depth -->
-                            <path d="M 46,35 L 46,23 L 35.6,29 L 35.6,41 Z" fill="url(#emblemGradFooter)" opacity="0.3" /> <!-- Top-Left Face -->
-                            <path d="M 46,35 L 46,23 L 56.4,29 L 56.4,41 Z" fill="url(#emblemGradFooter)" opacity="0.75" /> <!-- Top-Right Face -->
-                            <path d="M 46,35 L 35.6,41 L 46,47 L 56.4,41 Z" fill="url(#emblemGradFooter)" opacity="0.5" /> <!-- Bottom Face -->
-                            
-                            <!-- Wireframe Outline -->
-                            <!-- Outer Hexagon -->
-                            <path d="M 46,23 L 56.4,29 L 56.4,41 L 46,47 L 35.6,41 L 35.6,29 Z" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <!-- Inner Edges -->
-                            <line x1="46" y1="35" x2="46" y2="23" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-                            <line x1="46" y1="35" x2="35.6" y2="41" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-                            <line x1="46" y1="35" x2="56.4" y2="41" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-                            
-                            <!-- Central Connective Node -->
-                            <circle cx="46" cy="35" r="3.5" fill="#b583ff" />
-                        </g>
-
-                        <!-- DNA Helix -->
-                        <g transform="rotate(-15 40 40)">
-                            <line x1="33" y1="25" x2="47" y2="25" stroke="#ff69b4" stroke-width="1.5" opacity="0.6" />
-                            <line x1="31" y1="33" x2="49" y2="33" stroke="#ff69b4" stroke-width="1.5" opacity="0.6" />
-                            <line x1="31" y1="41" x2="49" y2="41" stroke="#33b5e8" stroke-width="1.5" opacity="0.6" />
-                            <line x1="33" y1="49" x2="47" y2="49" stroke="#33b5e8" stroke-width="1.5" opacity="0.6" />
-                            <line x1="37" y1="57" x2="43" y2="57" stroke="#33b5e8" stroke-width="1.5" opacity="0.6" />
-                            
-                            <path d="M 38,15 C 48,25 48,35 38,45 C 28,55 28,65 38,75" fill="none" stroke="url(#emblemGradFooter)" stroke-width="3" stroke-linecap="round" />
-                            <path d="M 42,15 C 32,25 32,35 42,45 C 52,55 52,65 42,75" fill="none" stroke="url(#emblemGradFooter)" stroke-width="3" stroke-linecap="round" />
-                        </g>
-
-                        <!-- Chemical Nodes -->
+                        <!-- PCB & Microprocessor & Spark Segment -->
                         <g>
-                            <line x1="16" y1="32" x2="24" y2="42" stroke="url(#emblemGradFooter)" stroke-width="2.5" />
-                            <line x1="24" y1="42" x2="16" y2="54" stroke="url(#emblemGradFooter)" stroke-width="2.5" />
-                            <line x1="24" y1="42" x2="34" y2="38" stroke="url(#emblemGradFooter)" stroke-width="2.5" />
-                            <circle cx="16" cy="32" r="3.5" fill="#ff69b4" />
-                            <circle cx="24" cy="42" r="4.5" fill="#b583ff" />
-                            <circle cx="16" cy="54" r="3.5" fill="#33b5e8" />
-                            <circle cx="34" cy="38" r="3" fill="#33b5e8" />
+                            <!-- Dashed Outer Layout Line -->
+                            <circle cx="40" cy="40" r="22" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="2,3" opacity="0.4" />
+                            
+                            <!-- Electric Spark (Left side) -->
+                            <path d="M 33,28 L 27,39 H 33 L 27,50" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                            
+                            <!-- Microprocessor (Right side) -->
+                            <!-- IC Body -->
+                            <rect x="47" y="34" width="11" height="11" rx="1.5" fill="none" stroke="#ffffff" stroke-width="1.8" />
+                            <rect x="50" y="37" width="5" height="5" rx="0.5" fill="#ffffff" opacity="0.7" />
+                            <!-- Pins -->
+                            <!-- Left Pins -->
+                            <line x1="43" y1="36.5" x2="47" y2="36.5" stroke="#ffffff" stroke-width="1" />
+                            <line x1="43" y1="39.5" x2="47" y2="39.5" stroke="#ffffff" stroke-width="1" />
+                            <line x1="43" y1="42.5" x2="47" y2="42.5" stroke="#ffffff" stroke-width="1" />
+                            <!-- Right Pins -->
+                            <line x1="58" y1="36.5" x2="62" y2="36.5" stroke="#ffffff" stroke-width="1" />
+                            <line x1="58" y1="39.5" x2="62" y2="39.5" stroke="#ffffff" stroke-width="1" />
+                            <line x1="58" y1="42.5" x2="62" y2="42.5" stroke="#ffffff" stroke-width="1" />
+                            <!-- Top Pins -->
+                            <line x1="49.5" y1="30" x2="49.5" y2="34" stroke="#ffffff" stroke-width="1" />
+                            <line x1="52.5" y1="30" x2="52.5" y2="34" stroke="#ffffff" stroke-width="1" />
+                            <line x1="55.5" y1="30" x2="55.5" y2="34" stroke="#ffffff" stroke-width="1" />
+                            <!-- Bottom Pins -->
+                            <line x1="49.5" y1="45" x2="49.5" y2="49" stroke="#ffffff" stroke-width="1" />
+                            <line x1="52.5" y1="45" x2="52.5" y2="49" stroke="#ffffff" stroke-width="1" />
+                            <line x1="55.5" y1="45" x2="55.5" y2="49" stroke="#ffffff" stroke-width="1" />
+
+                            <!-- SMT Components -->
+                            <rect x="21" y="32" width="2" height="5" rx="0.5" fill="none" stroke="#ffffff" stroke-width="0.8" />
+                            <rect x="42" y="52" width="5" height="2" rx="0.5" fill="none" stroke="#ffffff" stroke-width="0.8" />
+
+                            <!-- PCB Traces & Nodes -->
+                            <!-- Trace 1 -->
+                            <path d="M 23,24 L 28,29 V 35" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" />
+                            <circle cx="23" cy="24" r="1.2" fill="#ffffff" />
+                            <!-- Trace 2 -->
+                            <path d="M 20,45 L 26,40 H 31" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" />
+                            <circle cx="20" cy="45" r="1.2" fill="#ffffff" />
+                            <!-- Trace 3 -->
+                            <path d="M 48,21 V 27 L 44,31" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" />
+                            <circle cx="48" cy="21" r="1.2" fill="#ffffff" />
+                            <!-- Trace 4 -->
+                            <path d="M 58,53 L 53,48 V 44" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" />
+                            <circle cx="58" cy="53" r="1.2" fill="#ffffff" />
                         </g>
 
                         <!-- TEXT SECTION -->
-                        <text x="82" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="#ffffff">M</text>
-                        
-                        <g transform="translate(112, 10)">
-                            <path d="M 0,14 v 10 A 8,8 0 0,0 16,24 v -4" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
-                            <line x1="16" y1="20" x2="22" y2="12" stroke="#ff69b4" stroke-width="2.5" stroke-linecap="round" />
-                            <line x1="22" y1="12" x2="30" y2="18" stroke="#33b5e8" stroke-width="2.5" stroke-linecap="round" />
-                            <line x1="30" y1="18" x2="38" y2="5" stroke="#33b5e8" stroke-width="2.5" stroke-linecap="round" />
-                            <circle cx="16" cy="20" r="3" fill="#ffffff" />
-                            <circle cx="22" cy="12" r="3" fill="#ff69b4" />
-                            <circle cx="30" cy="18" r="3" fill="#b583ff" />
-                            <circle cx="38" cy="5" r="4" fill="#33b5e8" />
-                        </g>
+                        <text x="82" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="#ffffff">MUREX</text>
 
-                        <text x="156" y="44" font-family="'Poppins', 'Inter', sans-serif" font-weight="700" font-size="30" fill="#ffffff">REX</text>
-                        <text x="82" y="62" font-family="'Inter', sans-serif" font-weight="600" font-size="9" letter-spacing="1.2" fill="#33b5e8">ENGINEERING CONSULTING</text>
+                        <!-- Data Line Wave over REX -->
+                        <path d="M 138,20 C 150,5 165,28 180,12 C 195,-2 208,22 222,10" fill="none" stroke="#33b5e8" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="138" cy="20" r="3" fill="#ff69b4" />
+                        <circle cx="154" cy="11" r="2.5" fill="#33b5e8" />
+                        <circle cx="172" cy="17" r="2.5" fill="#ff69b4" />
+                        <circle cx="195" cy="7" r="3" fill="#33b5e8" />
+                        <circle cx="222" cy="10" r="3.5" fill="#ff69b4" />
+
+                        <!-- ENGINEERING & CONSULTING Stacked Text -->
+                        <text x="150" y="59" font-family="'Inter', sans-serif" font-weight="700" font-size="8.5" letter-spacing="2" fill="#33b5e8" text-anchor="middle">ENGINEERING</text>
+                        <text x="150" y="70" font-family="'Inter', sans-serif" font-weight="700" font-size="8.5" letter-spacing="2" fill="#33b5e8" text-anchor="middle">CONSULTING</text>
                     </svg>
                 </div>
                 <p data-i18n="footer_copy">&copy; 2026 Murex LLC. All rights reserved.</p>
@@ -669,6 +655,8 @@
         </div>
     </footer>
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
