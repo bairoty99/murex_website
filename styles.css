@@ -262,6 +262,9 @@ ul {
 
 .logo-text-adapt {
     transition: fill 0.3s ease;
+    text-anchor: start !important;
+    direction: ltr !important;
+    letter-spacing: normal !important;
 }
 
 .logo-stroke-adapt {
@@ -270,6 +273,9 @@ ul {
 
 .logo-subtext-adapt {
     transition: fill 0.3s ease;
+    text-anchor: start !important;
+    direction: ltr !important;
+    letter-spacing: 1.5px !important;
 }
 
 /* When navbar is not scrolled (transparent background, dark hero background) */
@@ -282,7 +288,7 @@ ul {
 }
 
 .navbar:not(.scrolled) .logo-subtext-adapt {
-    fill: #33b5e8; /* Lighter blue for high contrast on dark overlay */
+    fill: #ffffff; /* White to match mockup design on dark overlay */
 }
 
 /* When navbar is scrolled (white background) */
@@ -295,7 +301,7 @@ ul {
 }
 
 .navbar.scrolled .logo-subtext-adapt {
-    fill: var(--primary-light);
+    fill: var(--primary); /* Primary blue for contrast on white background */
 }
 
 .nav-links {
